@@ -119,7 +119,7 @@ func (kvs *KeyValueStore) Replicate(newNode *KeyValueStore) error {
 			return fmt.Errorf("failed to decode key-value pair: %s", err)
 		}
 
-		// Append "1" to the original key for the replicated key-value pair
+		// Append "new" to the original key for the replicated key-value pair
 		newKey := kv.Key + "_new"
 
 		// Insert the key-value pair with the new key into the new node's collection
